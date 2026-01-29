@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { InquiryDialog } from "./InquiryDialog";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function Navigation() {
+export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

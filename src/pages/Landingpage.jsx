@@ -1,5 +1,5 @@
-import { Header } from "../components/common/header";
-import { Hero } from "../components/ui/hero";
+import { Header } from "../components/sections/header";
+import { Hero } from "../components/sections/hero";
 import { Features } from "../components/Features";
 import { Experience } from "../components/Experience";
 import { Motto } from "../components/Motto";

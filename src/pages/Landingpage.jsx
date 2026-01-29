@@ -1,6 +1,6 @@
 import { Header } from "../components/sections/header";
 import { Hero } from "../components/sections/hero";
-import { Features } from "../components/Features";
+import { Features } from "../components/sections/features";
 import { Experience } from "../components/Experience";
 import { Motto } from "../components/Motto";
 import { Stats } from "../components/Stats";

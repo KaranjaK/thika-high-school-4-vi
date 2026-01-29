@@ -10,7 +10,7 @@ import { QuoteSection } from "../components/QuoteSection";
 import { Footer } from "../components/Footer";
 
 
-export default function Home() {
+export default function Landingpage() {
   return (
     <div className="min-h-screen bg-background font-body">
       <Header />

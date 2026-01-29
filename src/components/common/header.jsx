@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X, GraduationCap } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { InquiryDialog } from "./InquiryDialog";
 import { motion, AnimatePresence } from "framer-motion";
 

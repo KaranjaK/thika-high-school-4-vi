@@ -14,14 +14,18 @@ export default function Landingpage() {
   return (
     <div className="min-h-screen bg-background font-body">
       <Header />
-      <Hero />
-      <Features />
-      <Experience />
-      <Motto />
-      <Stats />
-      <Mission />
-      <Team />
-      <QuoteSection />
+
+      <main id="main" role="main" tabIndex={-1}>
+        <Hero />
+        <Features />
+        <Experience />
+        <Motto />
+        <Stats />
+        <Mission />
+        <Team />
+        <QuoteSection />
+      </main>
+
       <Footer />
     </div>
   );

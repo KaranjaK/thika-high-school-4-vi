@@ -1,6 +1,6 @@
 "use client"; // Only needed for Next.js 13+ app directory
 
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { Eye, Lightbulb, Globe2 } from "lucide-react";
 
 // Motion variants
@@ -36,7 +36,7 @@ export function Features() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <Motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
@@ -44,7 +44,7 @@ export function Features() {
           className="grid md:grid-cols-3 gap-8"
         >
           {features.map((feature, idx) => (
-            <motion.div
+            <Motion.div
               key={idx}
               variants={fadeInUp}
               className="group p-8 rounded-2xl bg-background border border-border/50 
@@ -58,9 +58,9 @@ export function Features() {
               </div>
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

@@ -44,4 +44,4 @@ const Button = React.forwardRef(
 
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { Button }; // Keep variant constants internal to this file to avoid react-refresh issues

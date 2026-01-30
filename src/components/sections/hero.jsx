@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { InquiryDialog } from "./InquiryDialog";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { Play } from "lucide-react";
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl">
           {/* Headline */}
-          <motion.h1
+          <Motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -28,10 +28,10 @@ export function Hero() {
           >
             A Visually Impaired Sight Is Not A Visually Impaired{" "}
             <span className="text-secondary">Mind.</span>
-          </motion.h1>
+          </Motion.h1>
 
           {/* Subtext */}
-          <motion.p
+          <Motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -39,10 +39,10 @@ export function Hero() {
           >
             Empowering students through holistic education, building faith, and
             cultivating courage for a future of excellence.
-          </motion.p>
+          </Motion.p>
 
           {/* Buttons */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -68,7 +68,7 @@ export function Hero() {
               </div>
               Watch Our Story
             </Button>
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Menu, X, GraduationCap } from "lucide-react";
 import { Button } from "../ui/button";
 import { InquiryDialog } from "./InquiryDialog";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);

@@ -2,21 +2,7 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils.js";
-
-// --- Chart Theme Constants ---
-export const THEMES = {
-  light: "light",
-  dark: "dark",
-};
-
-// --- Chart Context ---
-const ChartContext = React.createContext(null);
-
-export function useChart() {
-  const context = React.useContext(ChartContext);
-  if (!context) throw new Error("useChart must be used within a <ChartContainer />");
-  return context;
-}
+import { THEMES, ChartContext, useChart, getPayloadConfigFromPayload } from "./chart-utils"; // helpers moved to chart-utils for fast refresh compatibility
 
 // --- Chart Container ---
 export const ChartContainer = React.forwardRef(
@@ -78,7 +64,7 @@ ${THEMES.dark} [data-chart=${id}] {
 };
 
 // --- Chart Tooltip ---
-export const ChartTooltip = (props) => null; // Placeholder, can be customized using Recharts Tooltip
+export const ChartTooltip = () => null; // Placeholder, can be customized using Recharts Tooltip
 
 export const ChartTooltipContent = React.forwardRef(
   (
@@ -91,8 +77,6 @@ export const ChartTooltipContent = React.forwardRef(
       indicator = "dot",
       labelFormatter,
       nameKey,
-      labelKey,
-      formatter,
       color,
       label,
     },
@@ -102,16 +86,13 @@ export const ChartTooltipContent = React.forwardRef(
 
     if (!active || !payload?.length) return null;
 
-    const tooltipLabel = React.useMemo(() => {
-      if (hideLabel || !payload?.length) return null;
+    // Compute tooltip label without hooks to avoid conditional hook calls
+    let tooltipLabel = null;
+    if (!hideLabel && payload?.length) {
       const [item] = payload;
-      const key = `${labelKey || item?.dataKey || item?.name || "value"}`;
-      const itemConfig = getPayloadConfigFromPayload(config, item, key);
       const value = label || item?.value;
-
-      if (labelFormatter) return labelFormatter(value, payload);
-      return value;
-    }, [payload, hideLabel, labelFormatter, labelKey, label, config]);
+      tooltipLabel = labelFormatter ? labelFormatter(value, payload) : value;
+    }
 
     return (
       <div
@@ -123,8 +104,7 @@ export const ChartTooltipContent = React.forwardRef(
       >
         {!hideLabel && tooltipLabel && <div>{tooltipLabel}</div>}
         {payload.map((item, index) => {
-          const key = `${nameKey || item.name || item.dataKey || "value"}`;
-          const itemConfig = getPayloadConfigFromPayload(config, item, key);
+          const itemConfig = getPayloadConfigFromPayload(config, item, `${nameKey || item.name || item.dataKey || "value"}`);
           const indicatorColor = color || item.payload?.fill || item.color;
 
           return (
@@ -158,7 +138,7 @@ export const ChartTooltipContent = React.forwardRef(
 ChartTooltipContent.displayName = "ChartTooltipContent";
 
 // --- Chart Legend ---
-export const ChartLegend = (props) => null; // Placeholder for Recharts Legend
+export const ChartLegend = () => null; // Placeholder for Recharts Legend
 
 export const ChartLegendContent = React.forwardRef(
   ({ className, payload, hideIcon = false, verticalAlign = "bottom", nameKey }, ref) => {
@@ -193,9 +173,4 @@ export const ChartLegendContent = React.forwardRef(
 );
 ChartLegendContent.displayName = "ChartLegendContent";
 
-// --- Helper Function ---
-function getPayloadConfigFromPayload(config, payload, key) {
-  if (!payload || typeof payload !== "object") return undefined;
-  const payloadData = payload.payload || payload;
-  return config?.[key];
-}
+

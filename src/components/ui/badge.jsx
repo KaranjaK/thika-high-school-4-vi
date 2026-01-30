@@ -32,4 +32,4 @@ function Badge({ className, variant, ...props }) {
   );
 }
 
-export { Badge, badgeVariants };
+export { Badge }; // Do not export internal constants to keep Fast Refresh happy

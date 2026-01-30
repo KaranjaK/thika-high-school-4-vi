@@ -4,6 +4,7 @@ import { Features } from "../components/sections/features";
 import { Experience } from "../components/sections/experience";
 import { Motto } from "../components/sections/motto";
 import { Stats } from "../components/sections/stats";
+import { Mission } from "../components/sections/mission";
 
 export default function Landingpage() {
   return (
@@ -16,6 +17,7 @@ export default function Landingpage() {
         <Experience />
         <Motto />
         <Stats />
+        <Mission />
       </main>
     </div>
   );

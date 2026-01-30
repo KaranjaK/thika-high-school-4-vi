@@ -6,6 +6,7 @@ import { Motto } from "../components/sections/motto";
 import { Stats } from "../components/sections/stats";
 import { Mission } from "../components/sections/mission";
 import { Team } from "../components/sections/team"; 
+import { QuoteSection } from "../components/sections/quote";
 
 export default function Landingpage() {
   return (
@@ -20,6 +21,7 @@ export default function Landingpage() {
         <Stats />
         <Mission />
         <Team />
+        <QuoteSection />
       </main>
     </div>
   );

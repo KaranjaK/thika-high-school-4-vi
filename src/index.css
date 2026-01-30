@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   Design Tokens
+================================ */
+:root {
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  /* Primary Palette (HSL values only) */
+  --background: 60 11% 95%;
+  /* #F5F5F0 */
+  --foreground: 222 47% 11%;
+
+  --primary: 275 69% 18%;
+  /* #4A0E4E */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 225 73% 57%;
+  /* #4169E1 */
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 225 73% 57%;
+  --accent-foreground: 0 0% 100%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 275 69% 18%;
+
+  --radius: 0.75rem;
+}
+
+/* ================================
+   Dark Mode Tokens
+================================ */
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+
+  --primary: 275 69% 25%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 225 73% 65%;
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 225 73% 65%;
+  --accent-foreground: 0 0% 100%;
+
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 225 73% 65%;
+}
+
+/* ================================
+   Base Styles
+================================ */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-family: var(--font-body);
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ================================
+   Utilities
+================================ */
+@layer utilities {
+
+  /* Theme-aware gradient text */
+  .text-gradient {
+    background-image: linear-gradient(to right,
+        hsl(var(--primary)),
+        hsl(var(--secondary)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Glassmorphism card (dark-mode safe) */
+  .glass-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: var(--radius);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 10px 10px -5px rgb(0 0 0 / 0.04);
+
+    background-color: hsl(var(--background) / 0.8);
+  }
+
+  .dark .glass-card {
+    background-color: hsl(var(--background) / 0.6);
+    border-color: hsl(var(--border) / 0.6);
+  }
+}

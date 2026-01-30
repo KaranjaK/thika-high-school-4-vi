@@ -5,6 +5,7 @@ import { Experience } from "../components/sections/experience";
 import { Motto } from "../components/sections/motto";
 import { Stats } from "../components/sections/stats";
 import { Mission } from "../components/sections/mission";
+import { Team } from "../components/sections/team"; 
 
 export default function Landingpage() {
   return (
@@ -18,6 +19,7 @@ export default function Landingpage() {
         <Motto />
         <Stats />
         <Mission />
+        <Team />
       </main>
     </div>
   );

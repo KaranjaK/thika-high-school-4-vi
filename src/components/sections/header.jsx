@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Menu, X, GraduationCap } from "lucide-react";
 import { Button } from "../ui/button";
 import { InquiryDialog } from "./InquiryDialog";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion as Motion } from "framer-motion";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +54,7 @@ export function Header() {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -77,7 +77,7 @@ export function Header() {
                 </InquiryDialog>
               </div>
             </div>
-          </motion.div>
+          </Motion.div>
         )}
       </AnimatePresence>
     </nav>

@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=2073&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
 
       {/* Animated background circle */}
-      <motion.div
+      <Motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, delay: 0.2 }}

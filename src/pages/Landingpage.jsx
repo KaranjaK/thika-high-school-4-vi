@@ -1,14 +1,7 @@
 import { Header } from "../components/sections/header";
 import { Hero } from "../components/sections/hero";
 import { Features } from "../components/sections/features";
-import { Experience } from "../components/Experience";
-import { Motto } from "../components/Motto";
-import { Stats } from "../components/Stats";
-import { Mission } from "../components/Mission";
-import { Team } from "../components/Team";
-import { QuoteSection } from "../components/QuoteSection";
-import { Footer } from "../components/Footer";
-
+import { Experience } from "../components/sections/experience";
 
 export default function Landingpage() {
   return (
@@ -19,14 +12,8 @@ export default function Landingpage() {
         <Hero />
         <Features />
         <Experience />
-        <Motto />
-        <Stats />
-        <Mission />
-        <Team />
-        <QuoteSection />
+       
       </main>
-
-      <Footer />
     </div>
   );
 }

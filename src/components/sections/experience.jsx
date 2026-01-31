@@ -1,6 +1,7 @@
 import { motion as Motion, useReducedMotion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { useId } from "react";
+import gateImage from "../../assets/images/gate1.JPG";
 
 export function Experience() {
   const sectionId = useId();
@@ -32,7 +33,7 @@ export function Experience() {
           <Motion.figure {...fadeIn} className="relative">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop"
+                src={gateImage}
                 alt="Students engaged in an inclusive classroom learning environment"
                 className="w-full h-full object-cover"
                 loading="lazy"

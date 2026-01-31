@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { useId } from "react";
 
@@ -10,14 +10,14 @@ export function Experience() {
     initial: prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 24 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: "-80px" },
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: "easeOut" },
   };
 
   const items = [
     "Holistic Education Approach",
     "Building Energy for Life",
     "Adaptive Learning Technologies",
-    "World-class Faculty & Support"
+    "World-class Faculty & Support",
   ];
 
   return (
@@ -28,9 +28,8 @@ export function Experience() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-
           {/* Image / Visual Section */}
-          <motion.figure {...fadeIn} className="relative">
+          <Motion.figure {...fadeIn} className="relative">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop"
@@ -71,10 +70,10 @@ export function Experience() {
                 Years of <br /> Experience
               </span>
             </div>
-          </motion.figure>
+          </Motion.figure>
 
           {/* Text Content */}
-          <motion.div {...fadeIn} className="lg:pl-8">
+          <Motion.div {...fadeIn} className="lg:pl-8">
             <h2
               id={sectionId}
               className="text-3xl md:text-5xl font-display font-bold mb-6 text-primary"
@@ -83,16 +82,14 @@ export function Experience() {
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-prose">
-              For over five decades, we have been a beacon of hope and excellence,
-              providing specialized education that transcends physical limitations.
+              For over five decades, we have been a beacon of hope and
+              excellence, providing specialized education that transcends
+              physical limitations.
             </p>
 
             <ul role="list" className="space-y-4">
               {items.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3"
-                >
+                <li key={item} className="flex items-start gap-3">
                   <span
                     aria-hidden="true"
                     className="mt-1 w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0"
@@ -102,13 +99,11 @@ export function Experience() {
                       strokeWidth={2.5}
                     />
                   </span>
-                  <span className="font-medium text-foreground">
-                    {item}
-                  </span>
+                  <span className="font-medium text-foreground">{item}</span>
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </section>

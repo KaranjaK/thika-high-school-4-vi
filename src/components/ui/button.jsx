@@ -1,4 +1,4 @@
-import React from "react";
+import { forwardRef } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils.js";
@@ -8,10 +8,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground border border-primary-border",
-        destructive: "bg-destructive text-destructive-foreground border border-destructive-border",
-        outline: "border [border-color:var(--button-outline)] shadow-xs active:shadow-none",
-        secondary: "bg-secondary text-secondary-foreground border border-secondary-border",
+        default:
+          "bg-primary text-primary-foreground border border-primary-border",
+        destructive:
+          "bg-destructive text-destructive-foreground border border-destructive-border",
+        outline:
+          "border [border-color:var(--button-outline)] shadow-xs active:shadow-none",
+        secondary:
+          "bg-secondary text-secondary-foreground border border-secondary-border",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
@@ -26,10 +30,10 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
-const Button = React.forwardRef(
+const Button = forwardRef(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
@@ -39,7 +43,7 @@ const Button = React.forwardRef(
         {...props}
       />
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

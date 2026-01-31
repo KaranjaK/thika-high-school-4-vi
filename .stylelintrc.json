@@ -4,8 +4,17 @@
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen", "layer", "tools"]
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "layer",
+          "tools"
+        ]
       }
-    ]
+    ],
+    "property-no-vendor-prefix": null
   }
 }

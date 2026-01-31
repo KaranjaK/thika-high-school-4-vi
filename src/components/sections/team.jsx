@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
 import { useId } from "react";
 
 export function Team() {
@@ -6,14 +6,32 @@ export function Team() {
   const prefersReducedMotion = useReducedMotion();
 
   const members = [
-    { name: "Janet Doe", role: "Principal", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" },
-    { name: "Dr. John Doe", role: "Head of Academics", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" },
-    { name: "Sarah Smith", role: "Student Welfare", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" },
-    { name: "Mike Johnson", role: "Sports Director", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop" },
+    {
+      name: "Janet Doe",
+      role: "Principal",
+      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop",
+    },
+    {
+      name: "Dr. John Doe",
+      role: "Head of Academics",
+      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
+    },
+    {
+      name: "Sarah Smith",
+      role: "Student Welfare",
+      img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop",
+    },
+    {
+      name: "Mike Johnson",
+      role: "Sports Director",
+      img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop",
+    },
   ];
 
   const fadeIn = {
-    initial: prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+    initial: prefersReducedMotion
+      ? { opacity: 1, y: 0 }
+      : { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
     transition: { duration: 0.6 },
@@ -34,13 +52,14 @@ export function Team() {
             A Commitment to Quality Education
           </h2>
           <p className="text-muted-foreground">
-            Led by a team of dedicated professionals passionate about inclusive education.
+            Led by a team of dedicated professionals passionate about inclusive
+            education.
           </p>
         </header>
 
         <ul role="list" className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {members.map((member) => (
-            <motion.li
+            <Motion.li
               key={member.name}
               {...fadeIn}
               className="group outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-2xl"
@@ -78,7 +97,7 @@ export function Team() {
                 {member.name}
               </h3>
               <p className="text-sm text-muted-foreground">{member.role}</p>
-            </motion.li>
+            </Motion.li>
           ))}
         </ul>
       </div>

@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
 import { Play } from "lucide-react";
 import { useId } from "react";
 
@@ -23,10 +23,7 @@ export function Mission() {
   };
 
   return (
-    <section
-      aria-labelledby={headingId}
-      className="py-24 bg-background"
-    >
+    <section aria-labelledby={headingId} className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Intro */}
         <header className="max-w-3xl mb-16">
@@ -45,7 +42,7 @@ export function Mission() {
         {/* Mission Cards */}
         <div className="grid gap-6 md:grid-cols-2">
           {items.map((card, index) => (
-            <motion.article
+            <Motion.article
               key={card.title}
               {...cardAnimation}
               transition={{
@@ -112,7 +109,7 @@ export function Mission() {
               >
                 <Play className="w-5 h-5 fill-current" />
               </div>
-            </motion.article>
+            </Motion.article>
           ))}
         </div>
       </div>

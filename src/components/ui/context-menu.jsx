@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
 import { Check, ChevronRight, Circle } from "lucide-react";
@@ -19,7 +17,7 @@ const ContextMenuSubTrigger = ({ className, inset, children, ...props }) => (
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
-      className
+      className,
     )}
     {...props}
   >
@@ -33,7 +31,7 @@ const ContextMenuSubContent = ({ className, ...props }) => (
   <ContextMenuPrimitive.SubContent
     className={cn(
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md",
-      className
+      className,
     )}
     {...props}
   />
@@ -44,7 +42,7 @@ const ContextMenuContent = ({ className, ...props }) => (
   <ContextMenuPrimitive.Content
     className={cn(
       "z-50 min-w-[8rem] max-h-[--radix-context-menu-content-available-height] overflow-y-auto rounded-md border bg-popover p-1 text-popover-foreground shadow-md",
-      className
+      className,
     )}
     {...props}
   />
@@ -56,7 +54,7 @@ const ContextMenuItem = ({ className, inset, children, ...props }) => (
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
-      className
+      className,
     )}
     {...props}
   >
@@ -65,12 +63,17 @@ const ContextMenuItem = ({ className, inset, children, ...props }) => (
 );
 
 /* ---------------- Context Menu Checkbox Item ---------------- */
-const ContextMenuCheckboxItem = ({ className, children, checked, ...props }) => (
+const ContextMenuCheckboxItem = ({
+  className,
+  children,
+  checked,
+  ...props
+}) => (
   <ContextMenuPrimitive.CheckboxItem
     checked={checked}
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-      className
+      className,
     )}
     {...props}
   >
@@ -84,7 +87,7 @@ const ContextMenuRadioItem = ({ className, children, ...props }) => (
   <ContextMenuPrimitive.RadioItem
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-      className
+      className,
     )}
     {...props}
   >
@@ -96,7 +99,11 @@ const ContextMenuRadioItem = ({ className, children, ...props }) => (
 /* ---------------- Context Menu Label ---------------- */
 const ContextMenuLabel = ({ className, inset, ...props }) => (
   <ContextMenuPrimitive.Label
-    className={cn("px-2 py-1.5 text-sm font-semibold text-foreground", inset && "pl-8", className)}
+    className={cn(
+      "px-2 py-1.5 text-sm font-semibold text-foreground",
+      inset && "pl-8",
+      className,
+    )}
     {...props}
   />
 );
@@ -111,7 +118,13 @@ const ContextMenuSeparator = ({ className, ...props }) => (
 
 /* ---------------- Context Menu Shortcut ---------------- */
 const ContextMenuShortcut = ({ className, ...props }) => (
-  <span className={cn("ml-auto text-xs tracking-widest text-muted-foreground", className)} {...props} />
+  <span
+    className={cn(
+      "ml-auto text-xs tracking-widest text-muted-foreground",
+      className,
+    )}
+    {...props}
+  />
 );
 
 /* ---------------- Exports ---------------- */

@@ -1,16 +1,11 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion as Motion, useReducedMotion } from "framer-motion";
 import { useId } from "react";
 
 export function Motto() {
   const headingId = useId();
   const prefersReducedMotion = useReducedMotion();
 
-  const items = [
-    "Integrity",
-    "Resilience",
-    "Innovation",
-    "Community",
-  ];
+  const items = ["Integrity", "Resilience", "Innovation", "Community"];
 
   const itemAnimation = {
     initial: prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 24 },
@@ -55,12 +50,9 @@ export function Motto() {
         </header>
 
         {/* Values */}
-        <ul
-          role="list"
-          className="grid gap-6 sm:grid-cols-2 md:grid-cols-4"
-        >
+        <ul role="list" className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
           {items.map((value, index) => (
-            <motion.li
+            <Motion.li
               key={value}
               {...itemAnimation}
               transition={{
@@ -90,13 +82,11 @@ export function Motto() {
                   group-hover:w-16
                 "
               />
-              <h3 className="text-xl font-bold mb-2">
-                {value}
-              </h3>
+              <h3 className="text-xl font-bold mb-2">{value}</h3>
               <p className="text-sm opacity-80 max-w-prose">
                 Core pillar of our educational philosophy.
               </p>
-            </motion.li>
+            </Motion.li>
           ))}
         </ul>
       </div>

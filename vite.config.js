@@ -21,4 +21,5 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  base: "https://kelvin-karanja.github.io/thika-high-school-4-vi/",
 });

@@ -1,5 +1,10 @@
 import { motion as Motion, useReducedMotion } from "framer-motion";
 import { useId } from "react";
+import chiefPrincipal from "../../assets/images/Chief Principal.jpeg";
+import deputyPrincipal from "../../assets/images/Deputy Principal.JPG";
+import deanAcademics from "../../assets/images/Dean Academics.JPG";
+import transportManager from "../../assets/images/Transport Manager.JPG";
+
 
 export function Team() {
   const headingId = useId();
@@ -7,24 +12,24 @@ export function Team() {
 
   const members = [
     {
-      name: "Janet Doe",
+      name: "Madam Grace Kiarie",
       role: "Principal",
-      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop",
+      img: chiefPrincipal,
     },
     {
-      name: "Dr. John Doe",
-      role: "Head of Academics",
-      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
+      name: "Madam Jane Doe",
+      role: "Deputy Principal",
+      img: deputyPrincipal,
     },
     {
-      name: "Sarah Smith",
-      role: "Student Welfare",
-      img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop",
+      name: "Madam Ogongo",
+      role: "Dean Academics",
+      img: deanAcademics,
     },
     {
-      name: "Mike Johnson",
-      role: "Sports Director",
-      img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop",
+      name: "Mr. John Doe",
+      role: "Transport Manager",
+      img: transportManager,
     },
   ];
 

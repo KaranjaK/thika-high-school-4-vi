@@ -32,7 +32,7 @@ export function Footer() {
                 />
               </div>
               <span className="font-display font-bold text-xl">
-                SA Thika High
+                SA Thika High School for the Blind
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
@@ -69,7 +69,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-white/60">
               {[
                 "Secondary Education",
-                "Vocational Training",
+                "Senior High School all 3 Paths",
                 "Music & Arts",
                 "Sports & Recreation",
               ].map((program) => (
@@ -109,7 +109,7 @@ export function Footer() {
         {/* Bottom Row */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
           <p>
-            © {new Date().getFullYear()} SA Thika High School. All rights
+            © {new Date().getFullYear()} SA Thika High School for the Blind. All rights
             reserved.
           </p>
           <div className="flex gap-6">

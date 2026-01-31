@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kelvin-karanja.github.io/thika-high-school-4-vi/",
+  "homepage": "https://karanjak.github.io/thika-high-school-4-vi/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

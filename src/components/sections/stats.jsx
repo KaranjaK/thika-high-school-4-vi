@@ -6,8 +6,8 @@ export function Stats() {
   const items = [
     { label: "Students", value: "10k+" },
     { label: "Awards Won", value: "20+" },
-    { label: "Staff Members", value: "5k+" },
-    { label: "Campuses", value: "100+" },
+    { label: "Staff Members", value: "30+" },
+    { label: "Impact Stories", value: "50+" },
   ];
 
   return (
@@ -18,7 +18,7 @@ export function Stats() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id={headingId} className="sr-only">
-          Organization statistics
+          School's statistics
         </h2>
 
         <dl

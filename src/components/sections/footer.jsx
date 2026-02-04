@@ -32,12 +32,11 @@ export function Footer() {
                 />
               </div>
               <span className="font-display font-bold text-xl">
-                SA Thika High School for the Blind
+                Salvation Army Thika High School for the Blind
               </span>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed">
-              Empowering the visually impaired with quality education, skills,
-              and the confidence to conquer the world.
+            <p className="text-white/60 text-base leading-relaxed">
+              Faith & Courage Yields Excellence
             </p>
           </div>
 

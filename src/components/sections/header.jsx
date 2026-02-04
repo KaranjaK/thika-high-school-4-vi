@@ -17,8 +17,8 @@ export function Header() {
               <GraduationCap className="w-8 h-8 text-primary" />
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-xl leading-none text-primary">SA Thika</span>
-              <span className="font-body text-xs font-medium text-muted-foreground tracking-widest uppercase">High School for the Blind</span>
+              <span className="font-display font-bold text-xl leading-none text-primary">Salvation Army</span>
+              <span className="font-body text-xs font-medium text-muted-foreground tracking-widest uppercase">Thika High School for the Blind</span>
             </div>
           </Link>
 

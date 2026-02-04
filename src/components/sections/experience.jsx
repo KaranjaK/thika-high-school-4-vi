@@ -2,6 +2,8 @@ import { motion as Motion, useReducedMotion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { useId } from "react";
 import gateImage from "../../assets/images/gate1.JPG";
+import { Button } from "../ui/button";
+import { Link } from "wouter";
 
 export function Experience() {
   const sectionId = useId();
@@ -104,6 +106,13 @@ export function Experience() {
                 </li>
               ))}
             </ul>
+            <div className="flex items-center gap-4 mt-10">
+              <Link href="/thika-high-school-4-vi/history">
+                <Button className="bg-secondary hover:bg-secondary/90 text-white shadow-lg shadow-secondary/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                  Read More
+                </Button>
+              </Link>
+            </div>
           </Motion.div>
         </div>
       </div>

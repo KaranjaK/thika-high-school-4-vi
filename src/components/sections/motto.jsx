@@ -5,7 +5,7 @@ export function Motto() {
   const headingId = useId();
   const prefersReducedMotion = useReducedMotion();
 
-  const items = ["Integrity", "Resilience", "Innovation", "Community"];
+  const items = ["Honesty", "Excellence", "Discipline", "Diligence", "Integrity", "Focus", "Faith", "Inspiration", "Positivity"];
 
   const itemAnimation = {
     initial: prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 24 },
@@ -49,7 +49,10 @@ export function Motto() {
           </h2>
         </header>
 
-        {/* Values */}
+        {/* Core Values */}
+        <p className="text-center text-sm font-bold tracking-widest uppercase opacity-70 mb-3">
+          Our Core Values
+        </p>
         <ul role="list" className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
           {items.map((value, index) => (
             <Motion.li

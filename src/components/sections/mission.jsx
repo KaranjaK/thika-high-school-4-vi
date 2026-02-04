@@ -31,11 +31,21 @@ export function Mission() {
             id={headingId}
             className="text-4xl font-display font-bold text-primary mb-4"
           >
-            To be the school of choice in the region and beyond.
+            Our Vision
           </h2>
           <p className="text-muted-foreground text-lg max-w-prose">
-            Our strategic pillars ensure we deliver on our promise of excellence
-            every single day.
+            “To be school of choice in the region in the provision of quality education to visually challenged learners”.
+          </p>
+        </header>
+        <header className="max-w-3xl mb-16">
+          <h2
+            id={headingId}
+            className="text-4xl font-display font-bold text-primary mb-4"
+          >
+            Our Mission
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-prose">
+            “To utilize the most current and appropriate technology to impart knowledge, skills and aptitude, in a harmonious setting for visually challenged learners to unleash their unlimited potential, for maximum exploitation and utilization of environmental resources”.
           </p>
         </header>
 

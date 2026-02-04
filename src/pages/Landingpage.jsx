@@ -18,9 +18,9 @@ export default function Landingpage() {
         <Hero />
         <Features />
         <Experience />
-        <Mission />
         <Motto />
         <Stats />
+        <Mission />
         <Team />
         <QuoteSection />
       </main>

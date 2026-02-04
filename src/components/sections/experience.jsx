@@ -65,7 +65,7 @@ export function Experience() {
               aria-label="58 years of experience"
             >
               <span className="text-4xl sm:text-5xl font-display font-bold">
-                58
+                59
               </span>
               <span className="text-sm font-medium mt-2 opacity-90 leading-tight">
                 Years of <br /> Experience

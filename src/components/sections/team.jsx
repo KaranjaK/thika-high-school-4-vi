@@ -13,21 +13,21 @@ export function Team() {
   const members = [
     {
       name: "Madam Grace Kiarie",
-      role: "Principal",
+      role: "Chief Principal",
       img: chiefPrincipal,
       message:
         "Welcome to Thika High School — we foster curiosity, kindness, and academic excellence.",
     },
     {
       name: "Dr.Julia Keitany",
-      role: "Deputy Principal",
+      role: "Deputy Principal - Admission and Discipline",
       img: deputyPrincipal,
       message:
         "\"Joined the school as the deputy principal in September 2023. It is such a great opportunity to serve in this great school. The majority of the students in the school are disciplined, though one can not miss one or two who are mischievous. Otherwise, Thika High School for the Blind is home away from home for our students.\"",
     },
     {
       name: "Madam Ogongo",
-      role: "Dean Academics",
+      role: "Deputy Principal - Academics",
       img: deanAcademics,
       message:
         "Our focus is on holistic learning that prepares students for the future.",

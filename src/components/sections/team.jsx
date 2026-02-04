@@ -1,8 +1,8 @@
 import { motion as Motion, useReducedMotion } from "framer-motion";
 import { useId } from "react";
 import chiefPrincipal from "../../assets/images/Chief Principal.jpeg";
-import deputyPrincipal from "../../assets/images/Deputy Principal.JPG";
-import deanAcademics from "../../assets/images/Dean Academics.JPG";
+import deputyPrincipal from "../../assets/images/Deputy Principal.jpeg";
+import deanAcademics from "../../assets/images/Dean Academics.jpeg";
 import transportManager from "../../assets/images/Transport Manager.JPG";
 
 
@@ -15,21 +15,29 @@ export function Team() {
       name: "Madam Grace Kiarie",
       role: "Principal",
       img: chiefPrincipal,
+      message:
+        "Welcome to Thika High School — we foster curiosity, kindness, and academic excellence.",
     },
     {
-      name: "Madam Jane Doe",
+      name: "Dr.Julia Keitany",
       role: "Deputy Principal",
       img: deputyPrincipal,
+      message:
+        "\"Joined the school as the deputy principal in September 2023. It is such a great opportunity to serve in this great school. The majority of the students in the school are disciplined, though one can not miss one or two who are mischievous. Otherwise, Thika High School for the Blind is home away from home for our students.\"",
     },
     {
       name: "Madam Ogongo",
       role: "Dean Academics",
       img: deanAcademics,
+      message:
+        "Our focus is on holistic learning that prepares students for the future.",
     },
     {
       name: "Mr. John Doe",
       role: "Transport Manager",
       img: transportManager,
+      message:
+        "Safety and punctuality are my priorities — we ensure every journey is secure.",
     },
   ];
 
@@ -74,12 +82,11 @@ export function Team() {
               <div className="aspect-3/4 rounded-2xl overflow-hidden mb-4 relative">
                 <img
                   src={member.img}
-                  alt={member.name}
+                  alt={member.role}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
                 />
                 {/* Overlay on hover/focus */}
                 <div
-                  aria-hidden="true"
                   className="
                     absolute inset-0
                     bg-linear-to-t from-primary/80 to-transparent
@@ -91,16 +98,13 @@ export function Team() {
                   "
                 >
                   <div className="text-white">
-                    <p className="font-bold">{member.name}</p>
-                    <p className="text-sm opacity-90">{member.role}</p>
+                    <p className="text-sm opacity-90">{member.message}</p>
                   </div>
                 </div>
               </div>
 
               {/* Names & Role */}
-              <h3 className="font-bold text-lg text-primary group-hover:text-secondary transition-colors">
-                {member.name}
-              </h3>
+              <h3 className="font-bold text-lg text-primary">{member.name}</h3>
               <p className="text-sm text-muted-foreground">{member.role}</p>
             </Motion.li>
           ))}

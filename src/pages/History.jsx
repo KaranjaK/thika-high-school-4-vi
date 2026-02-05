@@ -6,7 +6,7 @@ import { Footer } from "../components/sections/footer";
 export default function HistoryPage() {
     const milestones = [
         {
-            year: "1985",
+            year: "1967",
             title: "The Foundation",
             description: "Established with a vision to provide quality education to visually impaired students in a supportive environment.",
             icon: Landmark
@@ -24,9 +24,9 @@ export default function HistoryPage() {
             icon: Users
         },
         {
-            year: "2020",
-            title: "Global Recognition",
-            description: "Recognized as a leading institution for excellence in special education, serving students across the region.",
+            year: "2026",
+            title: "C1 Senior School Status",
+            description: "Under the CBC Kenyan Curriculum, the school attained C1 status meaning it could offer all the three pathways.",
             icon: Target
         }
     ];
@@ -49,7 +49,7 @@ export default function HistoryPage() {
                                 Our Journey of Resilience
                             </h1>
                             <p className="text-xl opacity-90">
-                                For four decades, we've been transforming lives and breaking barriers through inclusive education and unwavering support.
+                                For five decades, we've been transforming lives and breaking barriers through inclusive education and unwavering support.
                             </p>
                         </motion.div>
                     </div>
@@ -63,10 +63,10 @@ export default function HistoryPage() {
                                 <h2 className="mb-6 font-display text-3xl font-bold text-primary">A Legacy of Empowerment</h2>
                                 <div className="space-y-6 text-lg text-muted-foreground">
                                     <p>
-                                        Founded on the principle that "A Visually Impaired Sight Is Not A Visually Impaired Mind," our institution started with just a handful of students and a profound dream.
+                                        Founded on the motto "Faith and Courage Yields Excellence," Thika High School for the Blind started with an initial enrollment of fifteeen(15) students in 1967 and a profound dream.
                                     </p>
                                     <p>
-                                        What began as a small community initiative has evolved into a premier educational center, pioneering new methods of instruction and vocational training for visually challenged learners.
+                                        What began as a small dream has evolved into a premier educational center, pioneering new methods of high school and now senior school training for visually challenged learners.
                                     </p>
                                     <p>
                                         Our history is not just about buildings and dates; it's about the thousands of graduates who have gone on to lead independent, successful lives, proving that with the right tools and support, there are no limits.
